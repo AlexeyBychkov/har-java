@@ -6,6 +6,8 @@ public class HarContentBuilder {
     private Long size;
     private Long compression;
     private String mimeType;
+
+    private String encoding;
     private String text;
     private String comment;
 
@@ -24,6 +26,11 @@ public class HarContentBuilder {
         return this;
     }
 
+    public HarContentBuilder withEncoding(String encoding) {
+        this.encoding = encoding;
+        return this;
+    }
+
     public HarContentBuilder withText(String text) {
         this.text = text;
         return this;
@@ -35,6 +42,6 @@ public class HarContentBuilder {
     }
 
     public HarContent build() {
-        return new HarContent(size, compression, mimeType, text, comment);
+        return new HarContent(size, compression, mimeType, encoding, text, comment);
     }
 }

@@ -27,18 +27,18 @@
         </developer>
     </developers>
 
-    <scm>
-        <url>https://github.com/SmartBear/har-java</url>
-        <connection>scm:git:ssh://git@github.com/SmartBear/har-java.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/SmartBear/har-java.git
-        </developerConnection>
-        <tag>master</tag>
-    </scm>
+<!--    <scm>-->
+<!--        <url>https://github.com/SmartBear/har-java</url>-->
+<!--        <connection>scm:git:ssh://git@github.com/SmartBear/har-java.git</connection>-->
+<!--        <developerConnection>scm:git:ssh://git@github.com/SmartBear/har-java.git-->
+<!--        </developerConnection>-->
+<!--        <tag>master</tag>-->
+<!--    </scm>-->
 
-    <issueManagement>
-        <system>github</system>
-        <url>https://github.com/SmartBear/har-java/issues</url>
-    </issueManagement>
+<!--    <issueManagement>-->
+<!--        <system>github</system>-->
+<!--        <url>https://github.com/SmartBear/har-java/issues</url>-->
+<!--    </issueManagement>-->
 
     <licenses>
         <license>
@@ -176,16 +176,16 @@
         </profile>
     </profiles>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
+<!--    <distributionManagement>-->
+<!--        <snapshotRepository>-->
+<!--            <id>ossrh</id>-->
+<!--            <url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+<!--        </snapshotRepository>-->
+<!--        <repository>-->
+<!--            <id>ossrh</id>-->
+<!--            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+<!--        </repository>-->
+<!--    </distributionManagement>-->
 
     <dependencies>
         <dependency>

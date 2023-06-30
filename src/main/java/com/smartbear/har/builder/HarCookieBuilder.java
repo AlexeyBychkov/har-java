@@ -8,8 +8,8 @@ public class HarCookieBuilder {
     private String path;
     private String domain;
     private String expires;
-    private boolean httpOnly;
-    private boolean secure;
+    private Boolean httpOnly;
+    private Boolean secure;
     private String comment;
 
     public HarCookieBuilder withName(String name) {

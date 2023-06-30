@@ -13,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "size",
         "compression",
         "mimeType",
+        "encoding",
         "text",
         "comment"
 })
@@ -21,16 +22,20 @@ public class HarContent {
     private Long size;
     private Long compression;
     private String mimeType;
+
+    private String encoding;
+
     private String text;
     private String comment;
 
     @JsonCreator
     public HarContent(@JsonProperty("size") Long size, @JsonProperty("compression") Long compression,
-                      @JsonProperty("mimeType") String mimeType, @JsonProperty("text") String text,
-                      @JsonProperty("comment") String comment) {
+                      @JsonProperty("mimeType") String mimeType, @JsonProperty("encoding") String encoding,
+                      @JsonProperty("text") String text, @JsonProperty("comment") String comment) {
         this.size = size;
         this.compression = compression;
         this.mimeType = mimeType;
+        this.encoding = encoding;
         this.text = text;
         this.comment = comment;
     }
@@ -55,9 +60,17 @@ public class HarContent {
         return size;
     }
 
+    public String getEncoding() {
+        return encoding;
+    }
+
+    public void setEncoding(String encoding) {
+        this.encoding = encoding;
+    }
+
     @Override
     public String toString() {
-        return "HarContent [text = " + text + ", comment = " + comment + ", compression = " + compression + ", mimeType = " + mimeType + ", size = " + size + "]";
+        return "HarContent [text = " + text + ", comment = " + comment + ", compression = " + compression + ", mimeType = " + mimeType + ", encoding = " + encoding +", size = " + size + "]";
     }
 }
 

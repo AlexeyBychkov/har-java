@@ -37,11 +37,11 @@ public class DefaultHarStreamWriter implements HarStreamWriter {
         jsonGenerator.writeFieldName("log");
         jsonGenerator.writeStartObject();
 
-        // Add optional fields if they are not null
-        if(comment != null){
-            jsonGenerator.writeFieldName("comment");
-            jsonGenerator.writeObject(comment);
-        }
+        jsonGenerator.writeFieldName("version");
+        jsonGenerator.writeObject(version);
+        jsonGenerator.writeFieldName("creator");
+        jsonGenerator.writeObject(creator);
+
         if(browser != null){
             jsonGenerator.writeFieldName("browser");
             jsonGenerator.writeObject(browser);
@@ -50,11 +50,10 @@ public class DefaultHarStreamWriter implements HarStreamWriter {
             jsonGenerator.writeFieldName("pages");
             jsonGenerator.writeObject(pages);
         }
-
-        jsonGenerator.writeFieldName("creator");
-        jsonGenerator.writeObject(creator);
-        jsonGenerator.writeFieldName("version");
-        jsonGenerator.writeObject(version);
+        if(comment != null){
+            jsonGenerator.writeFieldName("comment");
+            jsonGenerator.writeObject(comment);
+        }
     }
 
     @Override

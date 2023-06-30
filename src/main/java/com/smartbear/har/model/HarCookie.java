@@ -26,15 +26,15 @@ public class HarCookie {
     private String path;
     private String domain;
     private String expires;
-    private boolean httpOnly;
-    private boolean secure;
+    private Boolean httpOnly;
+    private Boolean secure;
     private String comment;
 
     @JsonCreator
     public HarCookie(@JsonProperty("name") String name, @JsonProperty("value") String value,
                      @JsonProperty("path") String path, @JsonProperty("domain") String domain,
-                     @JsonProperty("expires") String expires, @JsonProperty("httpOnly") boolean httpOnly,
-                     @JsonProperty("secure") boolean secure, @JsonProperty("comment") String comment) {
+                     @JsonProperty("expires") String expires, @JsonProperty("httpOnly") Boolean httpOnly,
+                     @JsonProperty("secure") Boolean secure, @JsonProperty("comment") String comment) {
         this.name = name;
         this.value = value;
         this.path = path;
@@ -53,7 +53,7 @@ public class HarCookie {
         return name;
     }
 
-    public boolean getSecure() {
+    public Boolean getSecure() {
         return secure;
     }
 
@@ -69,7 +69,7 @@ public class HarCookie {
         return value;
     }
 
-    public boolean getHttpOnly() {
+    public Boolean getHttpOnly() {
         return httpOnly;
     }
 
